@@ -1,0 +1,582 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 3K of event 'cycles:ppp'
+# Event count (approx.): 106323284365
+#
+# Children      Self  Command          Shared Object           Symbol                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+# ........  ........  ...............  ......................  ....................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+#
+    99.89%     0.00%  envoy            libpthread-2.27.so      [.] start_thread
+            |
+            ---start_thread
+               Envoy::Thread::Thread::Thread(std::function<void ()>)::{lambda(void*)#1}::_FUN
+               |          
+                --99.82%--Envoy::Server::WorkerImpl::threadRoutine
+                          event_base_loop
+                          event_process_active
+                          event_process_active_single_queue.isra.29
+                          Envoy::Event::FileEventImpl::assignEvents(unsigned int)::{lambda(int, short, void*)#1}::_FUN
+                          Envoy::Network::ConnectionImpl::onFileEvent
+                          Envoy::Network::ConnectionImpl::onReadReady
+                          Envoy::Network::FilterManagerImpl::onContinueReading
+                          Envoy::Http::CodecClient::CodecReadFilter::onData
+                          Envoy::Http::CodecClient::onData
+                          Envoy::Http::Http1::ConnectionImpl::dispatch
+                          Envoy::Http::Http1::ConnectionImpl::dispatchSlice
+                          http_parser_execute
+                          Envoy::Http::Http1::ConnectionImpl::onHeadersCompleteBase
+                          Envoy::Http::Http1::ClientConnectionImpl::onHeadersComplete
+                          Envoy::Router::Filter::onUpstreamHeaders
+                          Envoy::Router::RetryStateImpl::onHostAttempted
+                          std::for_each<__gnu_cxx::__normal_iterator<std::shared_ptr<Envoy::Upstream::RetryHostPredicate>*, std::vector<std::shared_ptr<Envoy::Upstream::RetryHostPredicate>, std::allocator<std::shared_ptr<Envoy::Upstream::RetryHostPredicate> > > >, Envoy::Router::RetryStateImpl::onHostAttempted(std::shared_ptr<Envoy::Upstream::HostDescription const>)::{lambda(auto:1)#1}>
+                          Envoy::OtherHostsRetryPredicate::onHostAttempted
+                          tcmalloc::allocate_full_cpp_throw_oom
+                          (anonymous namespace)::do_malloc_pages
+                          |          
+                           --99.56%--tcmalloc::PageHeap::New
+                                     tcmalloc::PageHeap::ReleaseAtLeastNPages
+
+    99.89%     0.00%  envoy            envoy-1.8.0-x86_64.bin  [.] Envoy::Thread::Thread::Thread(std::function<void ()>)::{lambda(void*)#1}::_FUN
+            |
+            ---Envoy::Thread::Thread::Thread(std::function<void ()>)::{lambda(void*)#1}::_FUN
+               |          
+                --99.82%--Envoy::Server::WorkerImpl::threadRoutine
+                          event_base_loop
+                          event_process_active
+                          event_process_active_single_queue.isra.29
+                          Envoy::Event::FileEventImpl::assignEvents(unsigned int)::{lambda(int, short, void*)#1}::_FUN
+                          Envoy::Network::ConnectionImpl::onFileEvent
+                          Envoy::Network::ConnectionImpl::onReadReady
+                          Envoy::Network::FilterManagerImpl::onContinueReading
+                          Envoy::Http::CodecClient::CodecReadFilter::onData
+                          Envoy::Http::CodecClient::onData
+                          Envoy::Http::Http1::ConnectionImpl::dispatch
+                          Envoy::Http::Http1::ConnectionImpl::dispatchSlice
+                          http_parser_execute
+                          Envoy::Http::Http1::ConnectionImpl::onHeadersCompleteBase
+                          Envoy::Http::Http1::ClientConnectionImpl::onHeadersComplete
+                          Envoy::Router::Filter::onUpstreamHeaders
+                          Envoy::Router::RetryStateImpl::onHostAttempted
+                          std::for_each<__gnu_cxx::__normal_iterator<std::shared_ptr<Envoy::Upstream::RetryHostPredicate>*, std::vector<std::shared_ptr<Envoy::Upstream::RetryHostPredicate>, std::allocator<std::shared_ptr<Envoy::Upstream::RetryHostPredicate> > > >, Envoy::Router::RetryStateImpl::onHostAttempted(std::shared_ptr<Envoy::Upstream::HostDescription const>)::{lambda(auto:1)#1}>
+                          Envoy::OtherHostsRetryPredicate::onHostAttempted
+                          tcmalloc::allocate_full_cpp_throw_oom
+                          (anonymous namespace)::do_malloc_pages
+                          |          
+                           --99.56%--tcmalloc::PageHeap::New
+                                     tcmalloc::PageHeap::ReleaseAtLeastNPages
+
+    99.86%     0.00%  envoy            envoy-1.8.0-x86_64.bin  [.] event_base_loop
+            |
+            ---event_base_loop
+               event_process_active
+               event_process_active_single_queue.isra.29
+               Envoy::Event::FileEventImpl::assignEvents(unsigned int)::{lambda(int, short, void*)#1}::_FUN
+               Envoy::Network::ConnectionImpl::onFileEvent
+               Envoy::Network::ConnectionImpl::onReadReady
+               Envoy::Network::FilterManagerImpl::onContinueReading
+               |          
+                --99.82%--Envoy::Http::CodecClient::CodecReadFilter::onData
+                          Envoy::Http::CodecClient::onData
+                          Envoy::Http::Http1::ConnectionImpl::dispatch
+                          Envoy::Http::Http1::ConnectionImpl::dispatchSlice
+                          http_parser_execute
+                          Envoy::Http::Http1::ConnectionImpl::onHeadersCompleteBase
+                          Envoy::Http::Http1::ClientConnectionImpl::onHeadersComplete
+                          Envoy::Router::Filter::onUpstreamHeaders
+                          Envoy::Router::RetryStateImpl::onHostAttempted
+                          std::for_each<__gnu_cxx::__normal_iterator<std::shared_ptr<Envoy::Upstream::RetryHostPredicate>*, std::vector<std::shared_ptr<Envoy::Upstream::RetryHostPredicate>, std::allocator<std::shared_ptr<Envoy::Upstream::RetryHostPredicate> > > >, Envoy::Router::RetryStateImpl::onHostAttempted(std::shared_ptr<Envoy::Upstream::HostDescription const>)::{lambda(auto:1)#1}>
+                          Envoy::OtherHostsRetryPredicate::onHostAttempted
+                          tcmalloc::allocate_full_cpp_throw_oom
+                          (anonymous namespace)::do_malloc_pages
+                          |          
+                           --99.56%--tcmalloc::PageHeap::New
+                                     tcmalloc::PageHeap::ReleaseAtLeastNPages
+
+    99.86%     0.00%  envoy            envoy-1.8.0-x86_64.bin  [.] event_process_active
+            |
+            ---event_process_active
+               event_process_active_single_queue.isra.29
+               Envoy::Event::FileEventImpl::assignEvents(unsigned int)::{lambda(int, short, void*)#1}::_FUN
+               Envoy::Network::ConnectionImpl::onFileEvent
+               Envoy::Network::ConnectionImpl::onReadReady
+               Envoy::Network::FilterManagerImpl::onContinueReading
+               |          
+                --99.82%--Envoy::Http::CodecClient::CodecReadFilter::onData
+                          Envoy::Http::CodecClient::onData
+                          Envoy::Http::Http1::ConnectionImpl::dispatch
+                          Envoy::Http::Http1::ConnectionImpl::dispatchSlice
+                          http_parser_execute
+                          Envoy::Http::Http1::ConnectionImpl::onHeadersCompleteBase
+                          Envoy::Http::Http1::ClientConnectionImpl::onHeadersComplete
+                          Envoy::Router::Filter::onUpstreamHeaders
+                          Envoy::Router::RetryStateImpl::onHostAttempted
+                          std::for_each<__gnu_cxx::__normal_iterator<std::shared_ptr<Envoy::Upstream::RetryHostPredicate>*, std::vector<std::shared_ptr<Envoy::Upstream::RetryHostPredicate>, std::allocator<std::shared_ptr<Envoy::Upstream::RetryHostPredicate> > > >, Envoy::Router::RetryStateImpl::onHostAttempted(std::shared_ptr<Envoy::Upstream::HostDescription const>)::{lambda(auto:1)#1}>
+                          Envoy::OtherHostsRetryPredicate::onHostAttempted
+                          tcmalloc::allocate_full_cpp_throw_oom
+                          (anonymous namespace)::do_malloc_pages
+                          |          
+                           --99.56%--tcmalloc::PageHeap::New
+                                     tcmalloc::PageHeap::ReleaseAtLeastNPages
+
+    99.86%     0.00%  envoy            envoy-1.8.0-x86_64.bin  [.] event_process_active_single_queue.isra.29
+            |
+            ---event_process_active_single_queue.isra.29
+               Envoy::Event::FileEventImpl::assignEvents(unsigned int)::{lambda(int, short, void*)#1}::_FUN
+               Envoy::Network::ConnectionImpl::onFileEvent
+               Envoy::Network::ConnectionImpl::onReadReady
+               Envoy::Network::FilterManagerImpl::onContinueReading
+               |          
+                --99.82%--Envoy::Http::CodecClient::CodecReadFilter::onData
+                          Envoy::Http::CodecClient::onData
+                          Envoy::Http::Http1::ConnectionImpl::dispatch
+                          Envoy::Http::Http1::ConnectionImpl::dispatchSlice
+                          http_parser_execute
+                          Envoy::Http::Http1::ConnectionImpl::onHeadersCompleteBase
+                          Envoy::Http::Http1::ClientConnectionImpl::onHeadersComplete
+                          Envoy::Router::Filter::onUpstreamHeaders
+                          Envoy::Router::RetryStateImpl::onHostAttempted
+                          std::for_each<__gnu_cxx::__normal_iterator<std::shared_ptr<Envoy::Upstream::RetryHostPredicate>*, std::vector<std::shared_ptr<Envoy::Upstream::RetryHostPredicate>, std::allocator<std::shared_ptr<Envoy::Upstream::RetryHostPredicate> > > >, Envoy::Router::RetryStateImpl::onHostAttempted(std::shared_ptr<Envoy::Upstream::HostDescription const>)::{lambda(auto:1)#1}>
+                          Envoy::OtherHostsRetryPredicate::onHostAttempted
+                          tcmalloc::allocate_full_cpp_throw_oom
+                          (anonymous namespace)::do_malloc_pages
+                          |          
+                           --99.56%--tcmalloc::PageHeap::New
+                                     tcmalloc::PageHeap::ReleaseAtLeastNPages
+
+    99.86%     0.00%  envoy            envoy-1.8.0-x86_64.bin  [.] Envoy::Event::FileEventImpl::assignEvents(unsigned int)::{lambda(int, short, void*)#1}::_FUN
+            |
+            ---Envoy::Event::FileEventImpl::assignEvents(unsigned int)::{lambda(int, short, void*)#1}::_FUN
+               Envoy::Network::ConnectionImpl::onFileEvent
+               Envoy::Network::ConnectionImpl::onReadReady
+               Envoy::Network::FilterManagerImpl::onContinueReading
+               |          
+                --99.82%--Envoy::Http::CodecClient::CodecReadFilter::onData
+                          Envoy::Http::CodecClient::onData
+                          Envoy::Http::Http1::ConnectionImpl::dispatch
+                          Envoy::Http::Http1::ConnectionImpl::dispatchSlice
+                          http_parser_execute
+                          Envoy::Http::Http1::ConnectionImpl::onHeadersCompleteBase
+                          Envoy::Http::Http1::ClientConnectionImpl::onHeadersComplete
+                          Envoy::Router::Filter::onUpstreamHeaders
+                          Envoy::Router::RetryStateImpl::onHostAttempted
+                          std::for_each<__gnu_cxx::__normal_iterator<std::shared_ptr<Envoy::Upstream::RetryHostPredicate>*, std::vector<std::shared_ptr<Envoy::Upstream::RetryHostPredicate>, std::allocator<std::shared_ptr<Envoy::Upstream::RetryHostPredicate> > > >, Envoy::Router::RetryStateImpl::onHostAttempted(std::shared_ptr<Envoy::Upstream::HostDescription const>)::{lambda(auto:1)#1}>
+                          Envoy::OtherHostsRetryPredicate::onHostAttempted
+                          tcmalloc::allocate_full_cpp_throw_oom
+                          (anonymous namespace)::do_malloc_pages
+                          |          
+                           --99.56%--tcmalloc::PageHeap::New
+                                     tcmalloc::PageHeap::ReleaseAtLeastNPages
+
+    99.86%     0.00%  envoy            envoy-1.8.0-x86_64.bin  [.] Envoy::Network::ConnectionImpl::onFileEvent
+            |
+            ---Envoy::Network::ConnectionImpl::onFileEvent
+               Envoy::Network::ConnectionImpl::onReadReady
+               Envoy::Network::FilterManagerImpl::onContinueReading
+               |          
+                --99.82%--Envoy::Http::CodecClient::CodecReadFilter::onData
+                          Envoy::Http::CodecClient::onData
+                          Envoy::Http::Http1::ConnectionImpl::dispatch
+                          Envoy::Http::Http1::ConnectionImpl::dispatchSlice
+                          http_parser_execute
+                          Envoy::Http::Http1::ConnectionImpl::onHeadersCompleteBase
+                          Envoy::Http::Http1::ClientConnectionImpl::onHeadersComplete
+                          Envoy::Router::Filter::onUpstreamHeaders
+                          Envoy::Router::RetryStateImpl::onHostAttempted
+                          std::for_each<__gnu_cxx::__normal_iterator<std::shared_ptr<Envoy::Upstream::RetryHostPredicate>*, std::vector<std::shared_ptr<Envoy::Upstream::RetryHostPredicate>, std::allocator<std::shared_ptr<Envoy::Upstream::RetryHostPredicate> > > >, Envoy::Router::RetryStateImpl::onHostAttempted(std::shared_ptr<Envoy::Upstream::HostDescription const>)::{lambda(auto:1)#1}>
+                          Envoy::OtherHostsRetryPredicate::onHostAttempted
+                          tcmalloc::allocate_full_cpp_throw_oom
+                          (anonymous namespace)::do_malloc_pages
+                          |          
+                           --99.56%--tcmalloc::PageHeap::New
+                                     tcmalloc::PageHeap::ReleaseAtLeastNPages
+
+    99.86%     0.00%  envoy            envoy-1.8.0-x86_64.bin  [.] Envoy::Network::ConnectionImpl::onReadReady
+            |
+            ---Envoy::Network::ConnectionImpl::onReadReady
+               Envoy::Network::FilterManagerImpl::onContinueReading
+               |          
+                --99.82%--Envoy::Http::CodecClient::CodecReadFilter::onData
+                          Envoy::Http::CodecClient::onData
+                          Envoy::Http::Http1::ConnectionImpl::dispatch
+                          Envoy::Http::Http1::ConnectionImpl::dispatchSlice
+                          http_parser_execute
+                          Envoy::Http::Http1::ConnectionImpl::onHeadersCompleteBase
+                          Envoy::Http::Http1::ClientConnectionImpl::onHeadersComplete
+                          Envoy::Router::Filter::onUpstreamHeaders
+                          Envoy::Router::RetryStateImpl::onHostAttempted
+                          std::for_each<__gnu_cxx::__normal_iterator<std::shared_ptr<Envoy::Upstream::RetryHostPredicate>*, std::vector<std::shared_ptr<Envoy::Upstream::RetryHostPredicate>, std::allocator<std::shared_ptr<Envoy::Upstream::RetryHostPredicate> > > >, Envoy::Router::RetryStateImpl::onHostAttempted(std::shared_ptr<Envoy::Upstream::HostDescription const>)::{lambda(auto:1)#1}>
+                          Envoy::OtherHostsRetryPredicate::onHostAttempted
+                          tcmalloc::allocate_full_cpp_throw_oom
+                          (anonymous namespace)::do_malloc_pages
+                          |          
+                           --99.56%--tcmalloc::PageHeap::New
+                                     tcmalloc::PageHeap::ReleaseAtLeastNPages
+
+    99.86%     0.00%  envoy            envoy-1.8.0-x86_64.bin  [.] Envoy::Network::FilterManagerImpl::onContinueReading
+            |
+            ---Envoy::Network::FilterManagerImpl::onContinueReading
+               |          
+                --99.82%--Envoy::Http::CodecClient::CodecReadFilter::onData
+                          Envoy::Http::CodecClient::onData
+                          Envoy::Http::Http1::ConnectionImpl::dispatch
+                          Envoy::Http::Http1::ConnectionImpl::dispatchSlice
+                          http_parser_execute
+                          Envoy::Http::Http1::ConnectionImpl::onHeadersCompleteBase
+                          Envoy::Http::Http1::ClientConnectionImpl::onHeadersComplete
+                          Envoy::Router::Filter::onUpstreamHeaders
+                          Envoy::Router::RetryStateImpl::onHostAttempted
+                          std::for_each<__gnu_cxx::__normal_iterator<std::shared_ptr<Envoy::Upstream::RetryHostPredicate>*, std::vector<std::shared_ptr<Envoy::Upstream::RetryHostPredicate>, std::allocator<std::shared_ptr<Envoy::Upstream::RetryHostPredicate> > > >, Envoy::Router::RetryStateImpl::onHostAttempted(std::shared_ptr<Envoy::Upstream::HostDescription const>)::{lambda(auto:1)#1}>
+                          Envoy::OtherHostsRetryPredicate::onHostAttempted
+                          tcmalloc::allocate_full_cpp_throw_oom
+                          (anonymous namespace)::do_malloc_pages
+                          |          
+                           --99.56%--tcmalloc::PageHeap::New
+                                     tcmalloc::PageHeap::ReleaseAtLeastNPages
+
+    99.86%     0.00%  envoy            envoy-1.8.0-x86_64.bin  [.] Envoy::Http::Http1::ConnectionImpl::dispatch
+            |
+            ---Envoy::Http::Http1::ConnectionImpl::dispatch
+               Envoy::Http::Http1::ConnectionImpl::dispatchSlice
+               http_parser_execute
+               |          
+                --99.82%--Envoy::Http::Http1::ConnectionImpl::onHeadersCompleteBase
+                          Envoy::Http::Http1::ClientConnectionImpl::onHeadersComplete
+                          Envoy::Router::Filter::onUpstreamHeaders
+                          Envoy::Router::RetryStateImpl::onHostAttempted
+                          std::for_each<__gnu_cxx::__normal_iterator<std::shared_ptr<Envoy::Upstream::RetryHostPredicate>*, std::vector<std::shared_ptr<Envoy::Upstream::RetryHostPredicate>, std::allocator<std::shared_ptr<Envoy::Upstream::RetryHostPredicate> > > >, Envoy::Router::RetryStateImpl::onHostAttempted(std::shared_ptr<Envoy::Upstream::HostDescription const>)::{lambda(auto:1)#1}>
+                          Envoy::OtherHostsRetryPredicate::onHostAttempted
+                          tcmalloc::allocate_full_cpp_throw_oom
+                          (anonymous namespace)::do_malloc_pages
+                          |          
+                           --99.56%--tcmalloc::PageHeap::New
+                                     tcmalloc::PageHeap::ReleaseAtLeastNPages
+
+    99.86%     0.00%  envoy            envoy-1.8.0-x86_64.bin  [.] Envoy::Http::Http1::ConnectionImpl::dispatchSlice
+            |
+            ---Envoy::Http::Http1::ConnectionImpl::dispatchSlice
+               http_parser_execute
+               |          
+                --99.82%--Envoy::Http::Http1::ConnectionImpl::onHeadersCompleteBase
+                          Envoy::Http::Http1::ClientConnectionImpl::onHeadersComplete
+                          Envoy::Router::Filter::onUpstreamHeaders
+                          Envoy::Router::RetryStateImpl::onHostAttempted
+                          std::for_each<__gnu_cxx::__normal_iterator<std::shared_ptr<Envoy::Upstream::RetryHostPredicate>*, std::vector<std::shared_ptr<Envoy::Upstream::RetryHostPredicate>, std::allocator<std::shared_ptr<Envoy::Upstream::RetryHostPredicate> > > >, Envoy::Router::RetryStateImpl::onHostAttempted(std::shared_ptr<Envoy::Upstream::HostDescription const>)::{lambda(auto:1)#1}>
+                          Envoy::OtherHostsRetryPredicate::onHostAttempted
+                          tcmalloc::allocate_full_cpp_throw_oom
+                          (anonymous namespace)::do_malloc_pages
+                          |          
+                           --99.56%--tcmalloc::PageHeap::New
+                                     tcmalloc::PageHeap::ReleaseAtLeastNPages
+
+    99.86%     0.00%  envoy            envoy-1.8.0-x86_64.bin  [.] http_parser_execute
+            |
+            ---http_parser_execute
+               |          
+                --99.82%--Envoy::Http::Http1::ConnectionImpl::onHeadersCompleteBase
+                          Envoy::Http::Http1::ClientConnectionImpl::onHeadersComplete
+                          Envoy::Router::Filter::onUpstreamHeaders
+                          Envoy::Router::RetryStateImpl::onHostAttempted
+                          std::for_each<__gnu_cxx::__normal_iterator<std::shared_ptr<Envoy::Upstream::RetryHostPredicate>*, std::vector<std::shared_ptr<Envoy::Upstream::RetryHostPredicate>, std::allocator<std::shared_ptr<Envoy::Upstream::RetryHostPredicate> > > >, Envoy::Router::RetryStateImpl::onHostAttempted(std::shared_ptr<Envoy::Upstream::HostDescription const>)::{lambda(auto:1)#1}>
+                          Envoy::OtherHostsRetryPredicate::onHostAttempted
+                          tcmalloc::allocate_full_cpp_throw_oom
+                          (anonymous namespace)::do_malloc_pages
+                          |          
+                           --99.56%--tcmalloc::PageHeap::New
+                                     tcmalloc::PageHeap::ReleaseAtLeastNPages
+
+    99.82%     0.00%  envoy            envoy-1.8.0-x86_64.bin  [.] Envoy::Server::WorkerImpl::threadRoutine
+            |
+            ---Envoy::Server::WorkerImpl::threadRoutine
+               event_base_loop
+               event_process_active
+               event_process_active_single_queue.isra.29
+               Envoy::Event::FileEventImpl::assignEvents(unsigned int)::{lambda(int, short, void*)#1}::_FUN
+               Envoy::Network::ConnectionImpl::onFileEvent
+               Envoy::Network::ConnectionImpl::onReadReady
+               Envoy::Network::FilterManagerImpl::onContinueReading
+               Envoy::Http::CodecClient::CodecReadFilter::onData
+               Envoy::Http::CodecClient::onData
+               Envoy::Http::Http1::ConnectionImpl::dispatch
+               Envoy::Http::Http1::ConnectionImpl::dispatchSlice
+               http_parser_execute
+               Envoy::Http::Http1::ConnectionImpl::onHeadersCompleteBase
+               Envoy::Http::Http1::ClientConnectionImpl::onHeadersComplete
+               Envoy::Router::Filter::onUpstreamHeaders
+               Envoy::Router::RetryStateImpl::onHostAttempted
+               std::for_each<__gnu_cxx::__normal_iterator<std::shared_ptr<Envoy::Upstream::RetryHostPredicate>*, std::vector<std::shared_ptr<Envoy::Upstream::RetryHostPredicate>, std::allocator<std::shared_ptr<Envoy::Upstream::RetryHostPredicate> > > >, Envoy::Router::RetryStateImpl::onHostAttempted(std::shared_ptr<Envoy::Upstream::HostDescription const>)::{lambda(auto:1)#1}>
+               Envoy::OtherHostsRetryPredicate::onHostAttempted
+               tcmalloc::allocate_full_cpp_throw_oom
+               (anonymous namespace)::do_malloc_pages
+               |          
+                --99.56%--tcmalloc::PageHeap::New
+                          tcmalloc::PageHeap::ReleaseAtLeastNPages
+
+    99.82%     0.00%  envoy            envoy-1.8.0-x86_64.bin  [.] Envoy::Http::CodecClient::CodecReadFilter::onData
+            |
+            ---Envoy::Http::CodecClient::CodecReadFilter::onData
+               Envoy::Http::CodecClient::onData
+               Envoy::Http::Http1::ConnectionImpl::dispatch
+               Envoy::Http::Http1::ConnectionImpl::dispatchSlice
+               http_parser_execute
+               Envoy::Http::Http1::ConnectionImpl::onHeadersCompleteBase
+               Envoy::Http::Http1::ClientConnectionImpl::onHeadersComplete
+               Envoy::Router::Filter::onUpstreamHeaders
+               Envoy::Router::RetryStateImpl::onHostAttempted
+               std::for_each<__gnu_cxx::__normal_iterator<std::shared_ptr<Envoy::Upstream::RetryHostPredicate>*, std::vector<std::shared_ptr<Envoy::Upstream::RetryHostPredicate>, std::allocator<std::shared_ptr<Envoy::Upstream::RetryHostPredicate> > > >, Envoy::Router::RetryStateImpl::onHostAttempted(std::shared_ptr<Envoy::Upstream::HostDescription const>)::{lambda(auto:1)#1}>
+               Envoy::OtherHostsRetryPredicate::onHostAttempted
+               tcmalloc::allocate_full_cpp_throw_oom
+               (anonymous namespace)::do_malloc_pages
+               |          
+                --99.56%--tcmalloc::PageHeap::New
+                          tcmalloc::PageHeap::ReleaseAtLeastNPages
+
+    99.82%     0.00%  envoy            envoy-1.8.0-x86_64.bin  [.] Envoy::Http::CodecClient::onData
+            |
+            ---Envoy::Http::CodecClient::onData
+               Envoy::Http::Http1::ConnectionImpl::dispatch
+               Envoy::Http::Http1::ConnectionImpl::dispatchSlice
+               http_parser_execute
+               Envoy::Http::Http1::ConnectionImpl::onHeadersCompleteBase
+               Envoy::Http::Http1::ClientConnectionImpl::onHeadersComplete
+               Envoy::Router::Filter::onUpstreamHeaders
+               Envoy::Router::RetryStateImpl::onHostAttempted
+               std::for_each<__gnu_cxx::__normal_iterator<std::shared_ptr<Envoy::Upstream::RetryHostPredicate>*, std::vector<std::shared_ptr<Envoy::Upstream::RetryHostPredicate>, std::allocator<std::shared_ptr<Envoy::Upstream::RetryHostPredicate> > > >, Envoy::Router::RetryStateImpl::onHostAttempted(std::shared_ptr<Envoy::Upstream::HostDescription const>)::{lambda(auto:1)#1}>
+               Envoy::OtherHostsRetryPredicate::onHostAttempted
+               tcmalloc::allocate_full_cpp_throw_oom
+               (anonymous namespace)::do_malloc_pages
+               |          
+                --99.56%--tcmalloc::PageHeap::New
+                          tcmalloc::PageHeap::ReleaseAtLeastNPages
+
+    99.82%     0.00%  envoy            envoy-1.8.0-x86_64.bin  [.] Envoy::Http::Http1::ConnectionImpl::onHeadersCompleteBase
+            |
+            ---Envoy::Http::Http1::ConnectionImpl::onHeadersCompleteBase
+               Envoy::Http::Http1::ClientConnectionImpl::onHeadersComplete
+               Envoy::Router::Filter::onUpstreamHeaders
+               Envoy::Router::RetryStateImpl::onHostAttempted
+               std::for_each<__gnu_cxx::__normal_iterator<std::shared_ptr<Envoy::Upstream::RetryHostPredicate>*, std::vector<std::shared_ptr<Envoy::Upstream::RetryHostPredicate>, std::allocator<std::shared_ptr<Envoy::Upstream::RetryHostPredicate> > > >, Envoy::Router::RetryStateImpl::onHostAttempted(std::shared_ptr<Envoy::Upstream::HostDescription const>)::{lambda(auto:1)#1}>
+               Envoy::OtherHostsRetryPredicate::onHostAttempted
+               tcmalloc::allocate_full_cpp_throw_oom
+               (anonymous namespace)::do_malloc_pages
+               |          
+                --99.56%--tcmalloc::PageHeap::New
+                          tcmalloc::PageHeap::ReleaseAtLeastNPages
+
+    99.82%     0.00%  envoy            envoy-1.8.0-x86_64.bin  [.] Envoy::Http::Http1::ClientConnectionImpl::onHeadersComplete
+            |
+            ---Envoy::Http::Http1::ClientConnectionImpl::onHeadersComplete
+               Envoy::Router::Filter::onUpstreamHeaders
+               Envoy::Router::RetryStateImpl::onHostAttempted
+               std::for_each<__gnu_cxx::__normal_iterator<std::shared_ptr<Envoy::Upstream::RetryHostPredicate>*, std::vector<std::shared_ptr<Envoy::Upstream::RetryHostPredicate>, std::allocator<std::shared_ptr<Envoy::Upstream::RetryHostPredicate> > > >, Envoy::Router::RetryStateImpl::onHostAttempted(std::shared_ptr<Envoy::Upstream::HostDescription const>)::{lambda(auto:1)#1}>
+               Envoy::OtherHostsRetryPredicate::onHostAttempted
+               tcmalloc::allocate_full_cpp_throw_oom
+               (anonymous namespace)::do_malloc_pages
+               |          
+                --99.56%--tcmalloc::PageHeap::New
+                          tcmalloc::PageHeap::ReleaseAtLeastNPages
+
+    99.82%     0.00%  envoy            envoy-1.8.0-x86_64.bin  [.] Envoy::Router::Filter::onUpstreamHeaders
+            |
+            ---Envoy::Router::Filter::onUpstreamHeaders
+               Envoy::Router::RetryStateImpl::onHostAttempted
+               std::for_each<__gnu_cxx::__normal_iterator<std::shared_ptr<Envoy::Upstream::RetryHostPredicate>*, std::vector<std::shared_ptr<Envoy::Upstream::RetryHostPredicate>, std::allocator<std::shared_ptr<Envoy::Upstream::RetryHostPredicate> > > >, Envoy::Router::RetryStateImpl::onHostAttempted(std::shared_ptr<Envoy::Upstream::HostDescription const>)::{lambda(auto:1)#1}>
+               Envoy::OtherHostsRetryPredicate::onHostAttempted
+               tcmalloc::allocate_full_cpp_throw_oom
+               (anonymous namespace)::do_malloc_pages
+               |          
+                --99.56%--tcmalloc::PageHeap::New
+                          tcmalloc::PageHeap::ReleaseAtLeastNPages
+
+    99.82%     0.00%  envoy            envoy-1.8.0-x86_64.bin  [.] Envoy::Router::RetryStateImpl::onHostAttempted
+            |
+            ---Envoy::Router::RetryStateImpl::onHostAttempted
+               std::for_each<__gnu_cxx::__normal_iterator<std::shared_ptr<Envoy::Upstream::RetryHostPredicate>*, std::vector<std::shared_ptr<Envoy::Upstream::RetryHostPredicate>, std::allocator<std::shared_ptr<Envoy::Upstream::RetryHostPredicate> > > >, Envoy::Router::RetryStateImpl::onHostAttempted(std::shared_ptr<Envoy::Upstream::HostDescription const>)::{lambda(auto:1)#1}>
+               Envoy::OtherHostsRetryPredicate::onHostAttempted
+               tcmalloc::allocate_full_cpp_throw_oom
+               (anonymous namespace)::do_malloc_pages
+               |          
+                --99.56%--tcmalloc::PageHeap::New
+                          tcmalloc::PageHeap::ReleaseAtLeastNPages
+
+    99.82%     0.00%  envoy            envoy-1.8.0-x86_64.bin  [.] std::for_each<__gnu_cxx::__normal_iterator<std::shared_ptr<Envoy::Upstream::RetryHostPredicate>*, std::vector<std::shared_ptr<Envoy::Upstream::RetryHostPredicate>, std::allocator<std::shared_ptr<Envoy::Upstream::RetryHostPredicate> > > >, Envoy::Router::RetryStateImpl::onHostAttempted(std::shared_ptr<Envoy::Upstream::HostDescription const>)::{lambda(auto:1)#1}>
+            |
+            ---std::for_each<__gnu_cxx::__normal_iterator<std::shared_ptr<Envoy::Upstream::RetryHostPredicate>*, std::vector<std::shared_ptr<Envoy::Upstream::RetryHostPredicate>, std::allocator<std::shared_ptr<Envoy::Upstream::RetryHostPredicate> > > >, Envoy::Router::RetryStateImpl::onHostAttempted(std::shared_ptr<Envoy::Upstream::HostDescription const>)::{lambda(auto:1)#1}>
+               Envoy::OtherHostsRetryPredicate::onHostAttempted
+               tcmalloc::allocate_full_cpp_throw_oom
+               (anonymous namespace)::do_malloc_pages
+               |          
+                --99.56%--tcmalloc::PageHeap::New
+                          tcmalloc::PageHeap::ReleaseAtLeastNPages
+
+    99.82%     0.00%  envoy            envoy-1.8.0-x86_64.bin  [.] Envoy::OtherHostsRetryPredicate::onHostAttempted
+            |
+            ---Envoy::OtherHostsRetryPredicate::onHostAttempted
+               tcmalloc::allocate_full_cpp_throw_oom
+               (anonymous namespace)::do_malloc_pages
+               |          
+                --99.56%--tcmalloc::PageHeap::New
+                          tcmalloc::PageHeap::ReleaseAtLeastNPages
+
+    99.82%     0.00%  envoy            envoy-1.8.0-x86_64.bin  [.] tcmalloc::allocate_full_cpp_throw_oom
+            |
+            ---tcmalloc::allocate_full_cpp_throw_oom
+               (anonymous namespace)::do_malloc_pages
+               |          
+                --99.56%--tcmalloc::PageHeap::New
+                          tcmalloc::PageHeap::ReleaseAtLeastNPages
+
+    99.82%     0.00%  envoy            envoy-1.8.0-x86_64.bin  [.] (anonymous namespace)::do_malloc_pages
+            |
+            ---(anonymous namespace)::do_malloc_pages
+               |          
+                --99.56%--tcmalloc::PageHeap::New
+                          tcmalloc::PageHeap::ReleaseAtLeastNPages
+
+    99.56%    99.47%  envoy            envoy-1.8.0-x86_64.bin  [.] tcmalloc::PageHeap::ReleaseAtLeastNPages
+            |          
+             --99.47%--start_thread
+                       Envoy::Thread::Thread::Thread(std::function<void ()>)::{lambda(void*)#1}::_FUN
+                       Envoy::Server::WorkerImpl::threadRoutine
+                       event_base_loop
+                       event_process_active
+                       event_process_active_single_queue.isra.29
+                       Envoy::Event::FileEventImpl::assignEvents(unsigned int)::{lambda(int, short, void*)#1}::_FUN
+                       Envoy::Network::ConnectionImpl::onFileEvent
+                       Envoy::Network::ConnectionImpl::onReadReady
+                       Envoy::Network::FilterManagerImpl::onContinueReading
+                       Envoy::Http::CodecClient::CodecReadFilter::onData
+                       Envoy::Http::CodecClient::onData
+                       Envoy::Http::Http1::ConnectionImpl::dispatch
+                       Envoy::Http::Http1::ConnectionImpl::dispatchSlice
+                       http_parser_execute
+                       Envoy::Http::Http1::ConnectionImpl::onHeadersCompleteBase
+                       Envoy::Http::Http1::ClientConnectionImpl::onHeadersComplete
+                       Envoy::Router::Filter::onUpstreamHeaders
+                       Envoy::Router::RetryStateImpl::onHostAttempted
+                       std::for_each<__gnu_cxx::__normal_iterator<std::shared_ptr<Envoy::Upstream::RetryHostPredicate>*, std::vector<std::shared_ptr<Envoy::Upstream::RetryHostPredicate>, std::allocator<std::shared_ptr<Envoy::Upstream::RetryHostPredicate> > > >, Envoy::Router::RetryStateImpl::onHostAttempted(std::shared_ptr<Envoy::Upstream::HostDescription const>)::{lambda(auto:1)#1}>
+                       Envoy::OtherHostsRetryPredicate::onHostAttempted
+                       tcmalloc::allocate_full_cpp_throw_oom
+                       (anonymous namespace)::do_malloc_pages
+                       tcmalloc::PageHeap::New
+                       tcmalloc::PageHeap::ReleaseAtLeastNPages
+
+    99.56%     0.00%  envoy            envoy-1.8.0-x86_64.bin  [.] tcmalloc::PageHeap::New
+            |
+            ---tcmalloc::PageHeap::New
+               tcmalloc::PageHeap::ReleaseAtLeastNPages
+
+     0.30%     0.19%  envoy            envoy-1.8.0-x86_64.bin  [.] SpinLock::SlowLock
+     0.16%     0.02%  envoy            [kernel.kallsyms]       [k] entry_SYSCALL_64_after_hwframe
+     0.14%     0.00%  envoy            [kernel.kallsyms]       [k] do_syscall_64
+     0.14%     0.00%  envoy            [kernel.kallsyms]       [k] sys_futex
+     0.12%     0.02%  envoy            [kernel.kallsyms]       [k] futex_wait
+     0.12%     0.00%  envoy            [kernel.kallsyms]       [k] do_futex
+     0.11%     0.00%  envoy            envoy-1.8.0-x86_64.bin  [.] base::internal::SpinLockDelay
+     0.10%     0.00%  envoy            [kernel.kallsyms]       [k] futex_wait_queue_me
+     0.08%     0.00%  envoy            [kernel.kallsyms]       [k] schedule
+     0.08%     0.00%  envoy            [kernel.kallsyms]       [k] __schedule
+     0.08%     0.00%  envoy            envoy-1.8.0-x86_64.bin  [.] Envoy::Server::GuardDogImpl::threadRoutine
+     0.08%     0.00%  envoy            envoy-1.8.0-x86_64.bin  [.] Envoy::Server::GuardDogImpl::waitOrDetectStop
+     0.08%     0.00%  envoy            envoy-1.8.0-x86_64.bin  [.] absl::CondVar::WaitWithTimeout
+     0.08%     0.00%  envoy            envoy-1.8.0-x86_64.bin  [.] absl::CondVar::WaitWithDeadline
+     0.08%     0.00%  envoy            envoy-1.8.0-x86_64.bin  [.] absl::CondVar::WaitCommon
+     0.08%     0.00%  envoy            envoy-1.8.0-x86_64.bin  [.] AbslInternalPerThreadSemWait
+     0.08%     0.00%  envoy            libc-2.27.so            [.] syscall
+     0.06%     0.00%  envoy            [kernel.kallsyms]       [k] deactivate_task
+     0.06%     0.00%  envoy            [kernel.kallsyms]       [k] dequeue_task_fair
+     0.06%     0.00%  envoy            [kernel.kallsyms]       [k] dequeue_entity
+     0.05%     0.00%  envoy            [unknown]               [k] 0xefae258d4c544155
+     0.05%     0.00%  envoy            libc-2.27.so            [.] __libc_start_main
+     0.05%     0.00%  envoy            envoy-1.8.0-x86_64.bin  [.] main
+     0.05%     0.00%  envoy            envoy-1.8.0-x86_64.bin  [.] Envoy::MainCommonBase::run
+     0.05%     0.00%  envoy            envoy-1.8.0-x86_64.bin  [.] Envoy::Server::InstanceImpl::run
+     0.05%     0.00%  envoy            envoy-1.8.0-x86_64.bin  [.] Envoy::Http::ConnectionManagerImpl::onData
+     0.05%     0.00%  envoy            envoy-1.8.0-x86_64.bin  [.] Envoy::Http::Http1::ConnectionImpl::{lambda(http_parser*)#7}::_FUN
+     0.05%     0.00%  envoy            envoy-1.8.0-x86_64.bin  [.] Envoy::Http::Http1::ConnectionImpl::onMessageCompleteBase
+     0.05%     0.00%  envoy            envoy-1.8.0-x86_64.bin  [.] Envoy::Http::Http1::ServerConnectionImpl::onMessageComplete
+     0.05%     0.00%  envoy            envoy-1.8.0-x86_64.bin  [.] Envoy::Http::ConnectionManagerImpl::ActiveStream::decodeHeaders
+     0.05%     0.00%  envoy            envoy-1.8.0-x86_64.bin  [.] Envoy::Http::ConnectionManagerImpl::ActiveStream::decodeHeaders
+     0.05%     0.00%  envoy            envoy-1.8.0-x86_64.bin  [.] Envoy::Server::AdminFilter::decodeHeaders
+     0.05%     0.00%  envoy            envoy-1.8.0-x86_64.bin  [.] Envoy::Server::AdminFilter::onComplete
+     0.05%     0.00%  envoy            envoy-1.8.0-x86_64.bin  [.] Envoy::Server::AdminImpl::runCallback
+     0.05%     0.00%  envoy            envoy-1.8.0-x86_64.bin  [.] std::_Function_handler<Envoy::Http::Code (absl::string_view, Envoy::Http::HeaderMap&, Envoy::Buffer::Instance&, Envoy::Server::AdminStream&), Envoy::Server::AdminImpl::AdminImpl(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, Envoy::Server::Instance&)::{lambda(absl::string_view, Envoy::Http::HeaderMap&, Envoy::Buffer::Instance&, Envoy::Server::AdminStream&)#16}>::_M_invoke
+     0.05%     0.00%  envoy            envoy-1.8.0-x86_64.bin  [.] Envoy::Server::AdminImpl::handlerPrometheusStats
+     0.05%     0.00%  envoy            envoy-1.8.0-x86_64.bin  [.] Envoy::Stats::ThreadLocalStoreImpl::counters
+     0.05%     0.00%  envoy            envoy-1.8.0-x86_64.bin  [.] std::_Hashtable<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::__detail::_Identity, std::equal_to<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::hash<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, true, true> >::_M_insert<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__detail::_AllocNode<std::allocator<std::__detail::_Hash_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, true> > > >
+     0.05%     0.00%  envoy            envoy-1.8.0-x86_64.bin  [.] std::__detail::_Hashtable_alloc<std::allocator<std::__detail::_Hash_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, true> > >::_M_allocate_node<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>
+     0.05%     0.00%  envoy            envoy-1.8.0-x86_64.bin  [.] tcmalloc::ThreadCache::FetchFromCentralCache
+     0.05%     0.00%  envoy            envoy-1.8.0-x86_64.bin  [.] tcmalloc::CentralFreeList::RemoveRange
+     0.05%     0.00%  envoy            envoy-1.8.0-x86_64.bin  [.] tcmalloc::CentralFreeList::FetchFromOneSpansSafe
+     0.05%     0.00%  envoy            envoy-1.8.0-x86_64.bin  [.] tcmalloc::CentralFreeList::Populate
+     0.03%     0.03%  envoy            [kernel.kallsyms]       [k] do_timer
+     0.03%     0.00%  envoy            [kernel.kallsyms]       [k] apic_timer_interrupt
+     0.03%     0.00%  envoy            [kernel.kallsyms]       [k] smp_apic_timer_interrupt
+     0.03%     0.00%  envoy            [kernel.kallsyms]       [k] hrtimer_interrupt
+     0.03%     0.00%  envoy            [kernel.kallsyms]       [k] __hrtimer_run_queues
+     0.03%     0.00%  envoy            [kernel.kallsyms]       [k] tick_sched_timer
+     0.03%     0.00%  envoy            [kernel.kallsyms]       [k] tick_sched_do_timer
+     0.03%     0.00%  envoy            [kernel.kallsyms]       [k] tick_do_update_jiffies64.part.10
+     0.03%     0.03%  envoy            [kernel.kallsyms]       [k] swapgs_restore_regs_and_return_to_usermode
+     0.03%     0.03%  envoy            [kernel.kallsyms]       [k] switch_to_thread_stack
+     0.03%     0.03%  grpc_global_tim  libpthread-2.27.so      [.] __pthread_mutex_lock
+     0.03%     0.00%  grpc_global_tim  libpthread-2.27.so      [.] start_thread
+     0.03%     0.00%  grpc_global_tim  envoy-1.8.0-x86_64.bin  [.] grpc_core::(anonymous namespace)::ThreadInternalsPosix::ThreadInternalsPosix(char const*, void (*)(void*), void*, bool*)::{lambda(void*)#1}::_FUN
+     0.03%     0.00%  grpc_global_tim  envoy-1.8.0-x86_64.bin  [.] timer_thread
+     0.03%     0.00%  grpc_global_tim  envoy-1.8.0-x86_64.bin  [.] timer_check
+     0.03%     0.00%  grpc_global_tim  envoy-1.8.0-x86_64.bin  [.] run_some_expired_timers
+     0.03%     0.03%  envoy            [kernel.kallsyms]       [k] account_entity_dequeue
+     0.03%     0.03%  envoy            [kernel.kallsyms]       [k] update_curr
+     0.03%     0.03%  envoy            [vdso]                  [.] __vdso_clock_gettime
+     0.03%     0.00%  envoy            [unknown]               [.] 0x887d8b48ffffb0e2
+     0.03%     0.00%  envoy            [unknown]               [.] 0x0000000000000008
+     0.03%     0.00%  envoy            libc-2.27.so            [.] __clock_gettime
+     0.02%     0.02%  envoy            [kernel.kallsyms]       [k] syscall_return_via_sysret
+     0.02%     0.02%  envoy            [kernel.kallsyms]       [k] read_tsc
+     0.02%     0.02%  envoy            [kernel.kallsyms]       [k] pick_next_task_fair
+     0.02%     0.02%  envoy            [kernel.kallsyms]       [k] _raw_spin_lock_irqsave
+     0.02%     0.00%  envoy            [kernel.kallsyms]       [k] hrtimer_start_range_ns
+     0.02%     0.00%  envoy            [kernel.kallsyms]       [k] lock_hrtimer_base.isra.20
+     0.00%     0.00%  envoy            [kernel.kallsyms]       [k] x86_pmu_enable
+     0.00%     0.00%  envoy            [kernel.kallsyms]       [k] intel_pmu_enable_all
+     0.00%     0.00%  envoy            [kernel.kallsyms]       [k] __intel_pmu_enable_all.constprop.19
+     0.00%     0.00%  envoy            [kernel.kallsyms]       [k] finish_task_switch
+     0.00%     0.00%  envoy            [kernel.kallsyms]       [k] __perf_event_task_sched_in
+     0.00%     0.00%  envoy            [kernel.kallsyms]       [k] intel_pmu_handle_irq
+     0.00%     0.00%  envoy            [kernel.kallsyms]       [k] native_apic_mem_write
+     0.00%     0.00%  envoy            [kernel.kallsyms]       [k] __indirect_thunk_start
+     0.00%     0.00%  envoy            [kernel.kallsyms]       [k] sched_clock
+     0.00%     0.00%  envoy            [kernel.kallsyms]       [k] intel_bts_enable_local
+     0.00%     0.00%  grpc_global_tim  libpthread-2.27.so      [.] pthread_cond_timedwait@@GLIBC_2.3.2
+     0.00%     0.00%  grpc_global_tim  [kernel.kallsyms]       [k] entry_SYSCALL_64_after_hwframe
+     0.00%     0.00%  grpc_global_tim  [kernel.kallsyms]       [k] do_syscall_64
+     0.00%     0.00%  grpc_global_tim  [kernel.kallsyms]       [k] sys_futex
+     0.00%     0.00%  grpc_global_tim  [kernel.kallsyms]       [k] do_futex
+     0.00%     0.00%  grpc_global_tim  [kernel.kallsyms]       [k] futex_wait
+     0.00%     0.00%  grpc_global_tim  [kernel.kallsyms]       [k] futex_wait_queue_me
+     0.00%     0.00%  grpc_global_tim  [kernel.kallsyms]       [k] schedule
+     0.00%     0.00%  grpc_global_tim  [kernel.kallsyms]       [k] __schedule
+     0.00%     0.00%  grpc_global_tim  [kernel.kallsyms]       [k] finish_task_switch
+     0.00%     0.00%  grpc_global_tim  [kernel.kallsyms]       [k] __perf_event_task_sched_in
+     0.00%     0.00%  grpc_global_tim  [kernel.kallsyms]       [k] x86_pmu_enable
+     0.00%     0.00%  grpc_global_tim  [kernel.kallsyms]       [k] intel_pmu_enable_all
+     0.00%     0.00%  grpc_global_tim  [kernel.kallsyms]       [k] __intel_pmu_enable_all.constprop.19
+     0.00%     0.00%  grpc_global_tim  [kernel.kallsyms]       [k] sched_clock
+     0.00%     0.00%  envoy            [kernel.kallsyms]       [k] perf_event_nmi_handler
+     0.00%     0.00%  envoy            [kernel.kallsyms]       [k] call_function_single_interrupt
+     0.00%     0.00%  envoy            [kernel.kallsyms]       [k] smp_call_function_single_interrupt
+     0.00%     0.00%  envoy            [kernel.kallsyms]       [k] generic_smp_call_function_single_interrupt
+     0.00%     0.00%  envoy            [kernel.kallsyms]       [k] flush_smp_call_function_queue
+     0.00%     0.00%  envoy            [kernel.kallsyms]       [k] remote_function
+     0.00%     0.00%  envoy            [kernel.kallsyms]       [k] event_function
+     0.00%     0.00%  envoy            [kernel.kallsyms]       [k] __perf_event_enable
+     0.00%     0.00%  envoy            [kernel.kallsyms]       [k] ctx_resched
+     0.00%     0.00%  envoy            [kernel.kallsyms]       [k] native_write_msr
+     0.00%     0.00%  grpc_global_tim  [kernel.kallsyms]       [k] native_write_msr
+
+
+#
+# (Tip: Order by the overhead of source file name and line number: perf report -s srcline)
+#
