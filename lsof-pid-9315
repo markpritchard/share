@@ -1,0 +1,233 @@
+COMMAND  PID USER   FD      TYPE             DEVICE   SIZE/OFF      NODE NAME
+envoy   9315 root  cwd       DIR                8,6       4096         2 /
+envoy   9315 root  rtd       DIR                8,6       4096         2 /
+envoy   9315 root  txt       REG                8,6  391443912  21233740 /home/envoy/releases/envoy-1.8.0-x86_64.bin
+envoy   9315 root  mem       REG               0,24    2654512        20 /dev/shm/envoy_shared_memory_0
+envoy   9315 root  mem       REG                8,6    2030544  41811997 /lib/x86_64-linux-gnu/libc-2.27.so
+envoy   9315 root  mem       REG                8,6    1700792  41812037 /lib/x86_64-linux-gnu/libm-2.27.so
+envoy   9315 root  mem       REG                8,6     144976  41812625 /lib/x86_64-linux-gnu/libpthread-2.27.so
+envoy   9315 root  mem       REG                8,6      14560  41812021 /lib/x86_64-linux-gnu/libdl-2.27.so
+envoy   9315 root  mem       REG                8,6      31680  41812636 /lib/x86_64-linux-gnu/librt-2.27.so
+envoy   9315 root  mem       REG                8,6     170960  41811971 /lib/x86_64-linux-gnu/ld-2.27.so
+envoy   9315 root    0r      CHR                1,3        0t0         6 /dev/null
+envoy   9315 root    1u     unix 0xffff898910c8ac00        0t0 819286718 type=STREAM
+envoy   9315 root    2u     unix 0xffff898910c8ac00        0t0 819286718 type=STREAM
+envoy   9315 root    3u      REG               0,24    2654512        20 /dev/shm/envoy_shared_memory_0
+envoy   9315 root    4u     unix 0xffff898911051800        0t0 819307572 @envoy_domain_socket_0@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ type=DGRAM
+envoy   9315 root    5u  a_inode               0,13          0     11673 [eventpoll]
+envoy   9315 root    6r     FIFO               0,12        0t0 819307575 pipe
+envoy   9315 root    7w     FIFO               0,12        0t0 819307575 pipe
+envoy   9315 root    8u  a_inode               0,13          0     11673 [eventfd]
+envoy   9315 root    9u      REG                8,6    2398396  17957865 /var/log/envoy/envoy-admin.log
+envoy   9315 root   10u     IPv4          819307576        0t0       TCP lb0-bm-sjc04-us:9020 (LISTEN)
+envoy   9315 root   11u  a_inode               0,13          0     11673 [eventpoll]
+envoy   9315 root   12r     FIFO               0,12        0t0 819307577 pipe
+envoy   9315 root   13w     FIFO               0,12        0t0 819307577 pipe
+envoy   9315 root   14u  a_inode               0,13          0     11673 [eventfd]
+envoy   9315 root   15u  a_inode               0,13          0     11673 [eventpoll]
+envoy   9315 root   16r     FIFO               0,12        0t0 819307578 pipe
+envoy   9315 root   17w     FIFO               0,12        0t0 819307578 pipe
+envoy   9315 root   18u  a_inode               0,13          0     11673 [eventfd]
+envoy   9315 root   19u  a_inode               0,13          0     11673 [eventpoll]
+envoy   9315 root   20r     FIFO               0,12        0t0 819307579 pipe
+envoy   9315 root   21w     FIFO               0,12        0t0 819307579 pipe
+envoy   9315 root   22u  a_inode               0,13          0     11673 [eventfd]
+envoy   9315 root   23u  a_inode               0,13          0     11673 [eventpoll]
+envoy   9315 root   24r     FIFO               0,12        0t0 819307580 pipe
+envoy   9315 root   25w     FIFO               0,12        0t0 819307580 pipe
+envoy   9315 root   26u  a_inode               0,13          0     11673 [eventfd]
+envoy   9315 root   27u  a_inode               0,13          0     11673 [eventpoll]
+envoy   9315 root   28r     FIFO               0,12        0t0 819307581 pipe
+envoy   9315 root   29w     FIFO               0,12        0t0 819307581 pipe
+envoy   9315 root   30u  a_inode               0,13          0     11673 [eventfd]
+envoy   9315 root   31u  a_inode               0,13          0     11673 [eventpoll]
+envoy   9315 root   32r     FIFO               0,12        0t0 819307582 pipe
+envoy   9315 root   33w     FIFO               0,12        0t0 819307582 pipe
+envoy   9315 root   34u  a_inode               0,13          0     11673 [eventfd]
+envoy   9315 root   35u  a_inode               0,13          0     11673 [eventpoll]
+envoy   9315 root   36r     FIFO               0,12        0t0 819307583 pipe
+envoy   9315 root   37w     FIFO               0,12        0t0 819307583 pipe
+envoy   9315 root   38u  a_inode               0,13          0     11673 [eventfd]
+envoy   9315 root   39u  a_inode               0,13          0     11673 [eventpoll]
+envoy   9315 root   40r     FIFO               0,12        0t0 819307584 pipe
+envoy   9315 root   41w     FIFO               0,12        0t0 819307584 pipe
+envoy   9315 root   42u  a_inode               0,13          0     11673 [eventfd]
+envoy   9315 root   43u  a_inode               0,13          0     11673 [eventpoll]
+envoy   9315 root   44u  a_inode               0,13          0     11673 [eventfd]
+envoy   9315 root   45u     IPv4          905402989        0t0       TCP lb0-bm-sjc04-us:44966->search5-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root   46u      REG                8,6 3069475370  17957711 /var/log/envoy/envoy-access-http.log
+envoy   9315 root   47u     IPv4          819307589        0t0       TCP *:9080 (LISTEN)
+envoy   9315 root   48u     IPv4          905402910        0t0       TCP lb0-bm-sjc04-us:49024->search1-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root   49u     sock                0,9        0t0 906930100 protocol: TCP
+envoy   9315 root   50u     sock                0,9        0t0 906930096 protocol: TCP
+envoy   9315 root   51u     IPv4          900824730        0t0       TCP lb0-bm-sjc04-us:46438->search4-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root   52u     IPv4          877606807        0t0       TCP lb0-bm-sjc04-us:9020->monitor0-bm-sjc04-us.jobapi.net:54600 (CLOSE_WAIT)
+envoy   9315 root   53u     sock                0,9        0t0 906930117 protocol: TCP
+envoy   9315 root   54u     sock                0,9        0t0 906933727 protocol: TCP
+envoy   9315 root   55u     sock                0,9        0t0 906930093 protocol: TCP
+envoy   9315 root   56u     IPv4          906706303        0t0       TCP lb0-bm-sjc04-us:53436->search2-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root   57u     sock                0,9        0t0 906930104 protocol: TCP
+envoy   9315 root   58u     sock                0,9        0t0 906932827 protocol: TCP
+envoy   9315 root   59u     IPv4          906214141        0t0       TCP lb0-bm-sjc04-us:57490->search2-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root   60u     sock                0,9        0t0 906932817 protocol: TCP
+envoy   9315 root   61u     sock                0,9        0t0 906932835 protocol: TCP
+envoy   9315 root   62u     IPv4          906784753        0t0       TCP lb0-bm-sjc04-us:60126->search5-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root   63u     IPv4          906335412        0t0       TCP lb0-bm-sjc04-us:53580->search1-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root   64u     IPv4          906800887        0t0       TCP lb0-bm-sjc04-us:36490->search5-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root   65u     sock                0,9        0t0 906935329 protocol: TCP
+envoy   9315 root   66u     sock                0,9        0t0 906932799 protocol: TCP
+envoy   9315 root   67u     IPv4          906850931        0t0       TCP lb0-bm-sjc04-us:55418->search3-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root   68u     sock                0,9        0t0 906931941 protocol: TCP
+envoy   9315 root   69u     IPv4          906010794        0t0       TCP lb0-bm-sjc04-us:49688->search0-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root   70u     sock                0,9        0t0 906930106 protocol: TCP
+envoy   9315 root   71u     sock                0,9        0t0 906934686 protocol: TCP
+envoy   9315 root   72u     IPv4          906833067        0t0       TCP lb0-bm-sjc04-us:47450->search3-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root   73u     sock                0,9        0t0 906934688 protocol: TCP
+envoy   9315 root   74u     IPv4          906876874        0t0       TCP lb0-bm-sjc04-us:55410->search4-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root   75u     sock                0,9        0t0 906933711 protocol: TCP
+envoy   9315 root   76u     sock                0,9        0t0 906932819 protocol: TCP
+envoy   9315 root   77u     sock                0,9        0t0 906932814 protocol: TCP
+envoy   9315 root   78u     sock                0,9        0t0 906927998 protocol: TCP
+envoy   9315 root   79u     IPv4          906469672        0t0       TCP lb0-bm-sjc04-us:33852->search0-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root   80u     sock                0,9        0t0 906933737 protocol: TCP
+envoy   9315 root   81u     IPv4          906928816        0t0       TCP lb0-bm-sjc04-us:47358->search4-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root   82u     IPv4          906698724        0t0       TCP lb0-bm-sjc04-us:43274->search4-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root   83u     IPv4          906490957        0t0       TCP lb0-bm-sjc04-us:54632->search3-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root   84u     sock                0,9        0t0 906932846 protocol: TCP
+envoy   9315 root   85u     IPv4          906497550        0t0       TCP lb0-bm-sjc04-us:58420->search5-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root   86u     sock                0,9        0t0 906931964 protocol: TCP
+envoy   9315 root   87u     sock                0,9        0t0 906930098 protocol: TCP
+envoy   9315 root   88u     sock                0,9        0t0 906935299 protocol: TCP
+envoy   9315 root   89u     IPv4          906872116        0t0       TCP lb0-bm-sjc04-us:39110->search1-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root   90u     sock                0,9        0t0 906930109 protocol: TCP
+envoy   9315 root   91u     IPv4          906654333        0t0       TCP lb0-bm-sjc04-us:34496->search2-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root   92u     sock                0,9        0t0 906932821 protocol: TCP
+envoy   9315 root   93u     IPv4          906872411        0t0       TCP lb0-bm-sjc04-us:52116->search4-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root   94u     sock                0,9        0t0 906933759 protocol: TCP
+envoy   9315 root   95u     IPv4          906758164        0t0       TCP lb0-bm-sjc04-us:44742->search2-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root   96u     sock                0,9        0t0 906930111 protocol: TCP
+envoy   9315 root   97u     sock                0,9        0t0 906930113 protocol: TCP
+envoy   9315 root   98u     IPv4          906433110        0t0       TCP lb0-bm-sjc04-us:59792->search2-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root   99u     sock                0,9        0t0 906930115 protocol: TCP
+envoy   9315 root  100u     sock                0,9        0t0 906931087 protocol: TCP
+envoy   9315 root  101u     IPv4          906616486        0t0       TCP lb0-bm-sjc04-us:54316->search1-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  102u     IPv4          906903602        0t0       TCP lb0-bm-sjc04-us:47382->search5-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  103u     IPv4          906895158        0t0       TCP lb0-bm-sjc04-us:34196->search4-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  104u     sock                0,9        0t0 906932824 protocol: TCP
+envoy   9315 root  105u     IPv4          906855914        0t0       TCP lb0-bm-sjc04-us:46946->search4-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  106u     sock                0,9        0t0 906931944 protocol: TCP
+envoy   9315 root  107u     IPv4          906901184        0t0       TCP lb0-bm-sjc04-us:34176->search0-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  108u     IPv4          906140142        0t0       TCP lb0-bm-sjc04-us:57956->search5-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  109u     IPv4          906645441        0t0       TCP lb0-bm-sjc04-us:60732->search5-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  110u     IPv4          906795918        0t0       TCP lb0-bm-sjc04-us:32826->search2-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  111u     IPv4          906752837        0t0       TCP lb0-bm-sjc04-us:34410->search4-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  112u     IPv4          906926999        0t0       TCP lb0-bm-sjc04-us:56082->search2-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  113u     IPv4          906718580        0t0       TCP lb0-bm-sjc04-us:59342->search5-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  114u     sock                0,9        0t0 906927985 protocol: TCP
+envoy   9315 root  115u     IPv4          905243421        0t0       TCP lb0-bm-sjc04-us:53698->search4-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  116u     sock                0,9        0t0 906927987 protocol: TCP
+envoy   9315 root  117u     IPv4          906435485        0t0       TCP lb0-bm-sjc04-us:34370->search3-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  118u     IPv4          906916469        0t0       TCP lb0-bm-sjc04-us:53228->search3-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  119u     IPv4          906626485        0t0       TCP lb0-bm-sjc04-us:52440->search3-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  120u     IPv4          905402892        0t0       TCP lb0-bm-sjc04-us:44056->search3-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  121u     sock                0,9        0t0 906930120 protocol: TCP
+envoy   9315 root  122u     IPv4          906849783        0t0       TCP lb0-bm-sjc04-us:53070->search2-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  123u     IPv4          906550549        0t0       TCP lb0-bm-sjc04-us:48788->search2-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  124u     IPv4          906901533        0t0       TCP lb0-bm-sjc04-us:50220->search1-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  125u     IPv4          906723472        0t0       TCP lb0-bm-sjc04-us:50148->search4-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  126u     sock                0,9        0t0 906930122 protocol: TCP
+envoy   9315 root  127u     sock                0,9        0t0 906930135 protocol: TCP
+envoy   9315 root  128u     IPv4          906904462        0t0       TCP lb0-bm-sjc04-us:36460->search0-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  129u     IPv4          906793967        0t0       TCP lb0-bm-sjc04-us:33128->search2-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  130u     sock                0,9        0t0 906930125 protocol: TCP
+envoy   9315 root  131u     IPv4          906505192        0t0       TCP lb0-bm-sjc04-us:34166->search3-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  132u     IPv4          906770850        0t0       TCP lb0-bm-sjc04-us:39390->search0-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  133u     IPv4          906097763        0t0       TCP lb0-bm-sjc04-us:55160->search0-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  134u     IPv4          906864568        0t0       TCP lb0-bm-sjc04-us:33592->search3-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  135u     IPv4          905022313        0t0       TCP lb0-bm-sjc04-us:49756->search0-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  136u     sock                0,9        0t0 906930127 protocol: TCP
+envoy   9315 root  137u     IPv4          906923780        0t0       TCP lb0-bm-sjc04-us:56456->search5-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  138u     sock                0,9        0t0 906930137 protocol: TCP
+envoy   9315 root  139u     IPv4          905402935        0t0       TCP lb0-bm-sjc04-us:59782->search0-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  140u     IPv4          906577504        0t0       TCP lb0-bm-sjc04-us:50402->search4-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  141u     IPv4          905744606        0t0       TCP lb0-bm-sjc04-us:39630->search2-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  142u     IPv4          906788165        0t0       TCP lb0-bm-sjc04-us:57312->search2-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  143u     IPv4          906826482        0t0       TCP lb0-bm-sjc04-us:47274->search5-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  144u     IPv4          906877384        0t0       TCP lb0-bm-sjc04-us:52262->search0-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  145u     IPv4          906849209        0t0       TCP lb0-bm-sjc04-us:55726->search5-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  146u     IPv4          906775019        0t0       TCP lb0-bm-sjc04-us:53370->search3-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  147u     sock                0,9        0t0 906932832 protocol: TCP
+envoy   9315 root  148u     IPv4          906692378        0t0       TCP lb0-bm-sjc04-us:48816->search2-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  149u     sock                0,9        0t0 906932848 protocol: TCP
+envoy   9315 root  150u     sock                0,9        0t0 906930129 protocol: TCP
+envoy   9315 root  151u     IPv4          906934420        0t0       TCP lb0-bm-sjc04-us:58706->search5-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  152u     IPv4          906312778        0t0       TCP lb0-bm-sjc04-us:40250->search5-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  153u     IPv4          905951002        0t0       TCP lb0-bm-sjc04-us:45490->search1-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  154u     sock                0,9        0t0 906933761 protocol: TCP
+envoy   9315 root  155u     sock                0,9        0t0 906931962 protocol: TCP
+envoy   9315 root  156u     sock                0,9        0t0 906928002 protocol: TCP
+envoy   9315 root  157u     IPv4          906910715        0t0       TCP lb0-bm-sjc04-us:56972->search1-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  158u     sock                0,9        0t0 906933717 protocol: TCP
+envoy   9315 root  159u     sock                0,9        0t0 906933719 protocol: TCP
+envoy   9315 root  160u     IPv4          905921996        0t0       TCP lb0-bm-sjc04-us:56796->search3-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  161u     IPv4          906838292        0t0       TCP lb0-bm-sjc04-us:36954->search0-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  162u     sock                0,9        0t0 906933721 protocol: TCP
+envoy   9315 root  163u     sock                0,9        0t0 906933723 protocol: TCP
+envoy   9315 root  164u     IPv4          906929724        0t0       TCP lb0-bm-sjc04-us:45634->search0-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  165u     IPv4          906775598        0t0       TCP lb0-bm-sjc04-us:53680->search5-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  166u     IPv4          906828979        0t0       TCP lb0-bm-sjc04-us:44828->search2-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  167u     IPv4          906930967        0t0       TCP lb0-bm-sjc04-us:48114->search4-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  168u     IPv4          906917809        0t0       TCP lb0-bm-sjc04-us:42602->search4-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  169u     IPv4          906645176        0t0       TCP lb0-bm-sjc04-us:60080->search5-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  170u     IPv4          906893289        0t0       TCP lb0-bm-sjc04-us:34456->search4-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  171u     IPv4          906846412        0t0       TCP lb0-bm-sjc04-us:51912->search2-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  172u     sock                0,9        0t0 906933725 protocol: TCP
+envoy   9315 root  173u     sock                0,9        0t0 906930102 protocol: TCP
+envoy   9315 root  174u     IPv4          905743568        0t0       TCP lb0-bm-sjc04-us:39442->search2-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  175u     IPv4          906843666        0t0       TCP lb0-bm-sjc04-us:52196->search3-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  176u     IPv4          906658059        0t0       TCP lb0-bm-sjc04-us:40556->search1-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  177u     IPv4          906929809        0t0       TCP lb0-bm-sjc04-us:47780->search4-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  178u     sock                0,9        0t0 906930131 protocol: TCP
+envoy   9315 root  179u     sock                0,9        0t0 906930133 protocol: TCP
+envoy   9315 root  180u     sock                0,9        0t0 906930139 protocol: TCP
+envoy   9315 root  181u     sock                0,9        0t0 906934697 protocol: TCP
+envoy   9315 root  182u     IPv4          906589940        0t0       TCP lb0-bm-sjc04-us:39198->search3-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  183u     IPv4          906881760        0t0       TCP lb0-bm-sjc04-us:44288->search1-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  184u     IPv4          906911971        0t0       TCP lb0-bm-sjc04-us:54826->search1-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  185u     sock                0,9        0t0 906933745 protocol: TCP
+envoy   9315 root  186u     sock                0,9        0t0 906927992 protocol: TCP
+envoy   9315 root  187u     IPv4          906742090        0t0       TCP lb0-bm-sjc04-us:40252->search3-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  188u     IPv4          906615435        0t0       TCP lb0-bm-sjc04-us:47588->search3-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  189u     sock                0,9        0t0 906933748 protocol: TCP
+envoy   9315 root  190u     sock                0,9        0t0 906933750 protocol: TCP
+envoy   9315 root  191u     IPv4          906887467        0t0       TCP lb0-bm-sjc04-us:56426->search0-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  192u     IPv4          905874624        0t0       TCP lb0-bm-sjc04-us:37356->search5-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  193u     IPv4          906671249        0t0       TCP lb0-bm-sjc04-us:56122->search0-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  194u     sock                0,9        0t0 906933752 protocol: TCP
+envoy   9315 root  195u     IPv4          906580328        0t0       TCP lb0-bm-sjc04-us:33912->search3-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  196u     IPv4          906799953        0t0       TCP lb0-bm-sjc04-us:53074->search4-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  197u     IPv4          906630065        0t0       TCP lb0-bm-sjc04-us:42142->search0-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  198u     sock                0,9        0t0 906931103 protocol: TCP
+envoy   9315 root  199u     IPv4          906859322        0t0       TCP lb0-bm-sjc04-us:60000->search5-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  200u     sock                0,9        0t0 906933755 protocol: TCP
+envoy   9315 root  201u     sock                0,9        0t0 906932838 protocol: TCP
+envoy   9315 root  202u     IPv4          906609992        0t0       TCP lb0-bm-sjc04-us:34958->search4-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  203u     sock                0,9        0t0 906932841 protocol: TCP
+envoy   9315 root  204u     sock                0,9        0t0 906932843 protocol: TCP
+envoy   9315 root  205u     IPv4          906847703        0t0       TCP lb0-bm-sjc04-us:59032->search1-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  206u     sock                0,9        0t0 906930143 protocol: TCP
+envoy   9315 root  207u     IPv4          906906822        0t0       TCP lb0-bm-sjc04-us:46886->search2-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  208u     IPv4          905207221        0t0       TCP lb0-bm-sjc04-us:38248->search0-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  209u     IPv4          906802796        0t0       TCP lb0-bm-sjc04-us:54218->search4-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  210u     sock                0,9        0t0 906930145 protocol: TCP
+envoy   9315 root  211u     sock                0,9        0t0 906931966 protocol: TCP
+envoy   9315 root  212u     sock                0,9        0t0 906932854 protocol: TCP
+envoy   9315 root  213u     IPv4          906450912        0t0       TCP lb0-bm-sjc04-us:45234->search1-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  214u     sock                0,9        0t0 906932856 protocol: TCP
+envoy   9315 root  215u     IPv4          906850942        0t0       TCP lb0-bm-sjc04-us:60322->search1-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  217u     IPv4          906869182        0t0       TCP lb0-bm-sjc04-us:51192->search4-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  220u     IPv4          906513629        0t0       TCP lb0-bm-sjc04-us:35780->search5-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  221u     IPv4          906933596        0t0       TCP lb0-bm-sjc04-us:35390->search1-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  233u     IPv4          906915170        0t0       TCP lb0-bm-sjc04-us:57132->search1-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  236u     IPv4          905787498        0t0       TCP lb0-bm-sjc04-us:34124->search1-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
+envoy   9315 root  244u     IPv4          905578793        0t0       TCP lb0-bm-sjc04-us:45796->search0-bm-sjc04-us.jobapi.net:8070 (CLOSE_WAIT)
